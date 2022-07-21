@@ -7,7 +7,7 @@ export const Checkbox = ({ item, onChange }) => {
             <input type="checkbox" checked = {item.state} onChange={() => onChange(item.id)}/>
                 <div className={classes.checkmark} />
                     <span className={classes.text}>
-                        {item.text} {item.state ? "checked" : "unchecked"}
+                        {item.text}
                     </span>
         </label>
     )

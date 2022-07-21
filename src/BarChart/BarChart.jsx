@@ -58,8 +58,8 @@ export const BarChart = (props) => {
     }
 
     const dataset = [];
-    for (let i = 0; i < labels.length; i++) {
-      dataset.push(json[labels[i]]);
+    for (let key in json) {
+      dataset.push(json[key]);
     }
     
     const data = {
