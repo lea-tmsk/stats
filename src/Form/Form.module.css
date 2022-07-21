@@ -1,0 +1,22 @@
+.dateInputs {
+    margin-top: 10px;
+}
+
+.checkbox {
+    align-self: flex-start;
+    position: relative;
+    margin-top: 45px;
+}
+
+.button {
+    display: flex;
+    justify-content: center;
+    height: 52px;
+    width: 185px;
+    border-radius: 26px;
+    background-color: #FFA71B;
+}
+  
+.button:hover {
+    background-color: #F59D10;
+}
