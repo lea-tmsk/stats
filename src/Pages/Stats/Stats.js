@@ -13,7 +13,7 @@ export const Stats = () => {
         <div className="ArrowFrame">
           <div className="Arrow"></div>
         </div>
-        <a href="/"></a>
+        <a href="/"> </a>
       </div>
       <div className="Bar">
         <BarChart title="Статистика"/>
