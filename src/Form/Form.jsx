@@ -3,6 +3,7 @@ import classes from './Form.module.css'
 import { ButtonGetStats } from '../ButtonGetStats/ButtonGetStats';
 import { DateInputs } from '../DateInputs/DateInputs';
 import { CheckBoxesList } from '../CheckBoxesList/CheckBoxesList';
+import axios from 'axios';
 
 export const Form = () => {
     const [items, setItems] = React.useState([
@@ -44,7 +45,18 @@ export const Form = () => {
     }
 
     function handleSubmit(event) {
-        console.log('submit')
+        const data = {};
+        data.from = document.getElementById("from").value;
+        data.to = document.getElementById("to").value;
+        for (let i = 0; i < items.length; i++) {
+            if (items[i].state === true) {
+                data[items[i].text] = items[i].text;
+            }
+        }
+        axios.post('/', data)
+        .then((response) => {
+            console.log(response.data);
+        });
         // event.preventDefault();
     }
 
