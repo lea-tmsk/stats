@@ -1,0 +1,16 @@
+
+.ChooseAll:hover {
+  color: #B4B4B4;
+}
+
+.text {
+  margin-top: 10px;
+  position: relative;
+  align-self: center;
+}
+
+.Choose {
+  display: flex;
+  gap: 50px;
+  user-select: none;
+}
