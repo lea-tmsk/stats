@@ -7,11 +7,9 @@ export const DateInputs = () => {
   return (
       <div className={classes.inputs}>
       <p>с</p>
-      <input type="date" required min="2016-10-15" max={today}/> 
-      {/* name="from" */}
+      <input type="date" id="from" required min="2016-10-15" max={today}/> 
       <p>до</p>
-      <input type="date" required max={today}/>
-      {/* name="to"  */}
+      <input type="date" id="to" required max={today}/>
       </div>
   )
 }
