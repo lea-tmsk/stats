@@ -48,16 +48,25 @@ export const Form = () => {
         const data = {};
         data.from = document.getElementById("from").value;
         data.to = document.getElementById("to").value;
+
+        let isAllUncheked = true;
         for (let i = 0; i < items.length; i++) {
             if (items[i].state === true) {
+                isAllUncheked = false;
                 data[items[i].text] = items[i].text;
             }
         }
-        axios.post('/', data)
-        .then((response) => {
-            console.log(response.data);
-        });
-        // event.preventDefault();
+
+        if (!isAllUncheked) {
+            axios.post('/', data)
+            .then((response) => {
+                console.log(response.data);
+            });
+        }
+        else {  
+            alert("Вы не выбрали тренажер");
+            event.preventDefault();
+        }
     }
 
     return (
